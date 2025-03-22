@@ -28,12 +28,26 @@ const gBooks = [
     bookest
 ]
 
+
+
+
 function getBooks() {
     return gBooks
 }
 
 function removeBook(title){
-    var idx = gBooks.findIndex((book) => book.title === title);
+    var idx = gBooks.findIndex((book) => book.title === title)
     gBooks.splice(idx,1)
+    render(getBooks())
+}
+
+function updatePrice(title){
+    var idx = gBooks.findIndex((book) => book.title === title)
+    var price = +prompt("Edit price");
+    if (typeof price === "number" && price > 0){
+        gBooks[idx].price = price
+    } else {
+        alert('Please enter a positive number') 
+    }
     render(getBooks())
 }

@@ -16,7 +16,7 @@ function render(books) {
     </tr>
     </thead>
     <tbody>
-    `;
+    `
     books.forEach(item => strHTML += renderRow(item))
     strHTML += `</tbody>`;
     document.querySelector('.book-table').innerHTML += strHTML
@@ -32,7 +32,7 @@ function renderRow(book) {
                     <button onClick="onRemoveBook('${book.title}')">Delete</button>
                 </td>
             </tr >
-            `;
+            `
 }
 
 function onReadBook(str){
@@ -40,7 +40,7 @@ function onReadBook(str){
 }
 
 function onUpdateBook(book){
-    console.log('Hi')
+    updatePrice(book)
 }
 
 function onRemoveBook(book){
