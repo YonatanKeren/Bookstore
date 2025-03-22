@@ -27,7 +27,7 @@ function renderRow(book) {
     <tr>
                 <td>${book.title}</td>
                 <td>${book.price}</td>
-                <td><button onClick="onReadBook('${book.title}')">Details</button>
+                <td><button onClick="onDetails('${book.title}')">Details</button>
                     <button onClick="onUpdateBook('${book.title}')">Update</button>
                     <button onClick="onRemoveBook('${book.title}')">Delete</button>
                 </td>
@@ -35,19 +35,22 @@ function renderRow(book) {
             `
 }
 
-function onReadBook(str){
+function onReadBook(str) {
     console.log(str)
 }
 
-function onUpdateBook(book){
+function onUpdateBook(book) {
     updatePrice(book)
 }
 
-function onRemoveBook(book){
+function onRemoveBook(book) {
     removeBook(book)
 }
 
-function onAddBook(){
+function onAddBook() {
     addBook()
 }
 
+function onDetails(title) { 
+    bookDetails(title)
+}

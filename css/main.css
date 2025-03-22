@@ -45,7 +45,10 @@ th {
     font-size: 13px;
 }
 
-table, td, th, tr {
+table,
+td,
+th,
+tr {
     border: 0.1px solid rgb(94, 81, 81);
 }
 
@@ -102,7 +105,7 @@ td:nth-child(3) button:nth-child(3):hover {
     transition: 0.5;
 }
 
-.add-btn{
+.add-btn {
     position: absolute;
     margin-top: 1vh;
     margin-left: -29vw;
@@ -110,11 +113,67 @@ td:nth-child(3) button:nth-child(3):hover {
     cursor: pointer;
 }
 
-.add-btn:hover{
+.add-btn:hover {
     position: absolute;
     margin-top: 1vh;
     margin-left: -29vw;
     background-color: rgba(100, 57, 0, 0.7);
     transform: scale(1.01);
     transition: 0.5;
+}
+
+.modal {
+    display: none;
+    border: 3px solid grey;
+    width: 50vw;
+    height: 50vw;
+    min-width: 250px;
+    min-height: 250px;
+    background-color: rgb(222, 226, 228);
+    color: black;
+    font-size: 32px;
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    z-index: 1;
+    border-radius: 5%;
+
+}
+
+.modal-content {
+    display: flex;
+
+}
+
+.close-btn {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    right: 20px;
+}
+
+.details-title {
+    position: absolute;
+    font-size: 32px;
+    top: 0vw;
+    left: 20vw;
+}
+
+.details-price {
+    position: absolute;
+    top: 10vw;
+    left: 1vw;
+    min-height: 100px;
+    min-width: 100px;
+    font-size: 20px;
+}
+
+.details-img {
+    position: absolute;
+    top: 16vw;
+    left: 16vw;
+    max-width: 25vw;
+    max-height: 25vw;
+    font-size: 12px;
 }

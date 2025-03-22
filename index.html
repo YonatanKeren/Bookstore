@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bookstore</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -13,6 +13,14 @@
     <div class="background-img"></div>
     <table class="book-table">
     </table>
+    <div class="modal">
+        <div class="modal-content">
+            <h2 class="details-title"></h2>
+            <button class="close-btn" onclick="toggleModal()">X</button>
+            <div class="details-price"></div>
+            <img class="details-img" src="img/bookstore2.jpg" alt="bookstore">
+        </div>
+    </div>
     <div>
         <button class="add-btn" onclick="onAddBook()">Add Book</button>
     </div>
