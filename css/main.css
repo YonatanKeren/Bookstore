@@ -6,12 +6,14 @@ body {
     background-color: rgb(165, 112, 112);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    color: rgb(36, 35, 35);
 }
 
 h1 {
     margin-top: 30px;
     font-weight: bold;
     font-size: 50px;
+    color: black;
 }
 
 .background-img {
@@ -25,4 +27,52 @@ h1 {
     width: 100vw;
     z-index: -1;
     opacity: 0.5;
+}
+
+table {
+    margin-top: 200px;
+    margin-left: 100px;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+th {
+    text-align: left;
+    padding-left: 5px;
+    padding-block: 4px;
+    background-color: rgba(206, 157, 157, 0.5);
+}
+
+table, td, th, tr {
+    border: 0.1px solid rgb(94, 81, 81);
+}
+
+button {
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(36, 35, 35);
+}
+
+td {
+    padding-inline: 10px;
+    padding-left: 5px;
+    padding-block: 3px;
+    text-align: left;
+}
+
+td:nth-child(3) button:first-child {
+    background-color: rgb(0, 153, 255);
+}
+
+td:nth-child(3) button:nth-child(2) {
+    background-color: rgb(241, 243, 96);
+}
+
+td:nth-child(3) button:nth-child(3) {
+    background-color: rgb(240, 180, 53);
+}
+
+tr:nth-child(2n) {
+    background-color: rgba(206, 157, 157, 0.4);
 }
