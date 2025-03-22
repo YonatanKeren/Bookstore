@@ -4,19 +4,21 @@
 
 //add random id function?
 const book = {
-    id: "aa0000",
+    id: 'aa0000',
     title: 'Book',
     price: 120,
     // imgUrl: 'book.jpg'
 }
+
 const booker = {
-    id: "aa0001",
+    id: 'aa0001',
     title: 'Booker',
     price: 300,
     // imgUrl: 'booker.jpg'
 }
+
 const bookest = {
-    id: "aa0002",
+    id: 'aa0002',
     title: 'Bookest',
     price: 999,
     // imgUrl: 'bookest.jpg'
@@ -28,11 +30,21 @@ const gBooks = [
     bookest
 ]
 
-
-
-
 function getBooks() {
     return gBooks
+}
+
+function generateId(){
+    var id = ''
+    for (var i = 0; i < 2; i++){
+        id += getRandomLetter()
+    }
+    for (var i = 0; i < 4; i++){
+        id += getRndIntIncMax(0,9)
+    }
+    var idx = gBooks.findIndex((book) => book.id === id)
+    if (idx === -1) return id
+    else generateId()
 }
 
 function removeBook(title){
@@ -49,5 +61,18 @@ function updatePrice(title){
     } else {
         alert('Please enter a positive number') 
     }
+    render(getBooks())
+}
+
+function addBook(){
+    const title = prompt('What is the title of the book?')
+    const price = +prompt("What is the book's price") 
+    const newBook = {
+        // id: add random id,
+        title: title,
+        price: price
+    }
+    gBooks.push(newBook)
+    console.log(gBooks)
     render(getBooks())
 }
