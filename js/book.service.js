@@ -31,3 +31,9 @@ const gBooks = [
 function getBooks() {
     return gBooks
 }
+
+function removeBook(title){
+    var idx = gBooks.findIndex((book) => book.title === title);
+    gBooks.splice(idx,1)
+    render(getBooks())
+}
